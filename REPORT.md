@@ -18,7 +18,7 @@ Zhipu `GLM-4.5-Air` MoE (106B total / ~12B active) at **Q4_K_M (73 GB, 2 shards)
 ## Serving configuration
 | Param | Value |
 |---|---|
-| Backend | llama.cpp build-master, `mctl switch glm-air` :8017 |
+| Backend | llama.cpp build-master, :8017 |
 | Quant | Q4_K_M, 73 GB, 2 shards (unsloth) |
 | Placement | **`-fit on`** — active path on GPU, routed experts → CPU RAM |
 | KV / ctx / fa | `--cache-type-k/v q8_0` · 4096 · `-fa on` |
@@ -50,4 +50,4 @@ compute-bound (compute-bound models show a wider spread).
 slower than 122B-MTP** on the same rig. Use when you want GLM's specific capabilities; for raw speed at this size the
 MTP-equipped 122B wins. **Disk: candidate for cleanup** (not a designated keeper — only Qwen3.5-122B + Leanstral stay).
 
-_2026-06-27 · `-fit on`, 7-workload clean run · keyingd · part of the >120B offload-class survey._
+_2026-06-27 · `-fit on`, 7-workload clean run · the test rig · part of the >120B offload-class survey._

@@ -1,7 +1,6 @@
 {
   "name": "glm-4.5-air",
   "backend": "llamacpp",
-  "manager": "direct",
   "extra_args": [
     "-fit",
     "on",
