@@ -51,3 +51,7 @@ slower than 122B-MTP** on the same rig. Use when you want GLM's specific capabil
 MTP-equipped 122B wins. **Disk: candidate for cleanup** (not a designated keeper — only Qwen3.5-122B + Leanstral stay).
 
 _2026-06-27 · `-fit on`, 7-workload clean run · the test rig · part of the >120B offload-class survey._
+
+
+## Update — ik_llama.cpp: 16 tok/s (vs 12 mainline)
+- ik_llama `--fit --run-time-repack -fa on -t 16` lifts GLM-4.5-Air from ~12 (mainline) to ~16 tok/s (~1.3x — modest vs lighter-active models since it is 12B-active, heavily RAM-offloaded). Same Q4_K_M, 73GB offload.
